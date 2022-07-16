@@ -5,12 +5,12 @@ function Clock() {
 
   useEffect(() => {
     console.log("running");
-    const timerId = setInterval(() => {
+    const timerID = setInterval(() => {
       setTime(new Date());
     }, 1000);
 
     return function cleanup(){
-      clearInterval(timerId)
+      clearInterval(timerID)
     }
   }, []);
 
